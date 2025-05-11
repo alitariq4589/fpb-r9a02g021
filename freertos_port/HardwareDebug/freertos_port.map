@@ -1,0 +1,887 @@
+     VMA      LMA     Size Align Out     In      Symbol
+       0        0       8a     2 .vec
+       0        0       8a     2         ./generate/start.o:(.text)
+       0        0        0     1                 .L0 
+       0        0        0     1                 .Ltmp0
+       0        0        0     1                 $x
+       0        0        0     1                 .L0 
+       0        0       8a     1                 _PowerON_Reset
+       4        4        0     1                 .L0 
+       8        8        0     1                 .Lpcrel_hi0
+       8        8        0     1                 .L0 
+      10       10        0     1                 .L0 
+      12       12        0     1                 .Lpcrel_hi1
+      12       12        0     1                 .L0 
+      1a       1a        0     1                 .Lpcrel_hi2
+      1a       1a        0     1                 .L0 
+      22       22        0     1                 .L0 
+      24       24        0     1                 .L0 
+      26       26        0     1                 .L0 
+      2a       2a        0     1                 .Lpcrel_hi3
+      2a       2a        0     1                 .L0 
+      32       32        0     1                 .Lpcrel_hi4
+      32       32        0     1                 .L0 
+      3a       3a        0     1                 .Lpcrel_hi5
+      3a       3a        0     1                 .L0 
+      42       42        0     1                 .L0 
+      46       46        0     1                 .Lpcrel_hi6
+      46       46        0     1                 .L0 
+      4e       4e        0     1                 .Lpcrel_hi7
+      4e       4e        0     1                 .L0 
+      56       56        0     1                 .Lpcrel_hi8
+      56       56        0     1                 .L0 
+      5e       5e        0     1                 .L0 
+      62       62        0     1                 .Lpcrel_hi9
+      62       62        0     1                 .L0 
+      6a       6a        0     1                 .L0 
+      6c       6c        0     1                 .Lpcrel_hi10
+      6c       6c        0     1                 .L0 
+      74       74        0     1                 .L0 
+      76       76        0     1                 .Lweak_atexit
+      76       76        0     1                 .L0 
+      7a       7a        0     1                 .L0 
+      7e       7e        0     1                 .L0 
+      80       80        0     1                 .L0 
+      82       82        0     1                 .L0 
+      84       84        0     1                 .L0 
+      86       86        0     1                 .L0 
+      8a       8a        0     1                 .L0 
+      c0       c0       cc     4 .vects
+      c0       c0       cc     4         ./generate/vects.o:(.vects)
+      c0       c0        0     1                 $d
+      c0       c0       cc     1                 InterruptVectors
+     1c0      1c0        4     4 .nvect
+     1c0      1c0        4     4         ./generate/vects.o:(.nvect)
+     1c0      1c0        0     1                 $d
+     1c0      1c0        4     1                 ExceptVectors
+     400      400        4     4 .option_ofs0
+     400      400        4     4         ./generate/vects.o:(.option_ofs0)
+     400      400        0     1                 $d
+     400      400        4     1                 Option_OFS0
+     404      404        4     4 .option_ofs1
+     404      404        4     4         ./generate/vects.o:(.option_ofs1)
+     404      404        0     1                 $d
+     404      404        4     1                 Option_OFS1
+     408      408       34     4 .option_frp
+     408      408       34     4         ./generate/vects.o:(.option_frp)
+     408      408        0     1                 $d
+     408      408       34     1                 Option_FPR
+     800      800       10     4 .option_osis
+     800      800       10     4         ./generate/vects.o:(.option_osis)
+     800      800        0     1                 $d
+     800      800       10     1                 Option_OSIS
+     810      810        0     1 __mdata = .
+     810      810      33e     2 .text
+     810      810       12     2         ./generate/exit.o:(.text)
+     810      810        0     1                 .L0 
+     810      810        0     1                 $x
+     810      810        0     1                 .L0 
+     810      810        0     1                 _exit
+     814      814        0     1                 .L0 
+     816      816        0     1                 .L0 
+     81a      81a        0     1                 .L0 
+     81c      81c        0     1                 .L0 
+     81e      81e        0     1                 .L0 
+     822      822        0     1                 .L0 
+     822      822       14     2         ./src/main.o:(.text.main)
+     822      822        0     1                 .L0 
+     822      822        0     1                 .L0 
+     822      822        0     1                 $x
+     822      822        0     1                 .L0 
+     822      822       14     1                 main
+     826      826        0     1                 .L0 
+     82e      82e        0     1                 .L0 
+     832      832        0     1                 .L0 
+     836      836        0     1                 .L0 
+     836      836        0     1                 .L0 
+     836      836        4     2         ./generate/inthandler.o:(.text.INT_ACLINT_MSIP)
+     836      836        0     1                 .L0 
+     836      836        0     1                 .L0 
+     836      836        0     1                 $x
+     836      836        0     1                 .L0 
+     836      836        4     1                 INT_ACLINT_MSIP
+     83a      83a        0     1                 .L0 
+     83a      83a        4     2         ./generate/inthandler.o:(.text.INT_ACLINT_MTIP)
+     83a      83a        0     1                 .L0 
+     83a      83a        0     1                 .L0 
+     83a      83a        0     1                 $x
+     83a      83a        0     1                 .L0 
+     83a      83a        4     1                 INT_ACLINT_MTIP
+     83e      83e        0     1                 .L0 
+     83e      83e        4     2         ./generate/inthandler.o:(.text.INT_IELSR0)
+     83e      83e        0     1                 .L0 
+     83e      83e        0     1                 .L0 
+     83e      83e        0     1                 $x
+     83e      83e        0     1                 .L0 
+     83e      83e        4     1                 INT_IELSR0
+     842      842        0     1                 .L0 
+     842      842        4     2         ./generate/inthandler.o:(.text.INT_IELSR1)
+     842      842        0     1                 .L0 
+     842      842        0     1                 .L0 
+     842      842        0     1                 $x
+     842      842        0     1                 .L0 
+     842      842        4     1                 INT_IELSR1
+     846      846        0     1                 .L0 
+     846      846        4     2         ./generate/inthandler.o:(.text.INT_IELSR2)
+     846      846        0     1                 .L0 
+     846      846        0     1                 .L0 
+     846      846        0     1                 $x
+     846      846        0     1                 .L0 
+     846      846        4     1                 INT_IELSR2
+     84a      84a        0     1                 .L0 
+     84a      84a        4     2         ./generate/inthandler.o:(.text.INT_IELSR3)
+     84a      84a        0     1                 .L0 
+     84a      84a        0     1                 .L0 
+     84a      84a        0     1                 $x
+     84a      84a        0     1                 .L0 
+     84a      84a        4     1                 INT_IELSR3
+     84e      84e        0     1                 .L0 
+     84e      84e        4     2         ./generate/inthandler.o:(.text.INT_IELSR4)
+     84e      84e        0     1                 .L0 
+     84e      84e        0     1                 .L0 
+     84e      84e        0     1                 $x
+     84e      84e        0     1                 .L0 
+     84e      84e        4     1                 INT_IELSR4
+     852      852        0     1                 .L0 
+     852      852        4     2         ./generate/inthandler.o:(.text.INT_IELSR5)
+     852      852        0     1                 .L0 
+     852      852        0     1                 .L0 
+     852      852        0     1                 $x
+     852      852        0     1                 .L0 
+     852      852        4     1                 INT_IELSR5
+     856      856        0     1                 .L0 
+     856      856        4     2         ./generate/inthandler.o:(.text.INT_IELSR6)
+     856      856        0     1                 .L0 
+     856      856        0     1                 .L0 
+     856      856        0     1                 $x
+     856      856        0     1                 .L0 
+     856      856        4     1                 INT_IELSR6
+     85a      85a        0     1                 .L0 
+     85a      85a        4     2         ./generate/inthandler.o:(.text.INT_IELSR7)
+     85a      85a        0     1                 .L0 
+     85a      85a        0     1                 .L0 
+     85a      85a        0     1                 $x
+     85a      85a        0     1                 .L0 
+     85a      85a        4     1                 INT_IELSR7
+     85e      85e        0     1                 .L0 
+     85e      85e        4     2         ./generate/inthandler.o:(.text.INT_IELSR8)
+     85e      85e        0     1                 .L0 
+     85e      85e        0     1                 .L0 
+     85e      85e        0     1                 $x
+     85e      85e        0     1                 .L0 
+     85e      85e        4     1                 INT_IELSR8
+     862      862        0     1                 .L0 
+     862      862        4     2         ./generate/inthandler.o:(.text.INT_IELSR9)
+     862      862        0     1                 .L0 
+     862      862        0     1                 .L0 
+     862      862        0     1                 $x
+     862      862        0     1                 .L0 
+     862      862        4     1                 INT_IELSR9
+     866      866        0     1                 .L0 
+     866      866        4     2         ./generate/inthandler.o:(.text.INT_IELSR10)
+     866      866        0     1                 .L0 
+     866      866        0     1                 .L0 
+     866      866        0     1                 $x
+     866      866        0     1                 .L0 
+     866      866        4     1                 INT_IELSR10
+     86a      86a        0     1                 .L0 
+     86a      86a        4     2         ./generate/inthandler.o:(.text.INT_IELSR11)
+     86a      86a        0     1                 .L0 
+     86a      86a        0     1                 .L0 
+     86a      86a        0     1                 $x
+     86a      86a        0     1                 .L0 
+     86a      86a        4     1                 INT_IELSR11
+     86e      86e        0     1                 .L0 
+     86e      86e        4     2         ./generate/inthandler.o:(.text.INT_IELSR12)
+     86e      86e        0     1                 .L0 
+     86e      86e        0     1                 .L0 
+     86e      86e        0     1                 $x
+     86e      86e        0     1                 .L0 
+     86e      86e        4     1                 INT_IELSR12
+     872      872        0     1                 .L0 
+     872      872        4     2         ./generate/inthandler.o:(.text.INT_IELSR13)
+     872      872        0     1                 .L0 
+     872      872        0     1                 .L0 
+     872      872        0     1                 $x
+     872      872        0     1                 .L0 
+     872      872        4     1                 INT_IELSR13
+     876      876        0     1                 .L0 
+     876      876        4     2         ./generate/inthandler.o:(.text.INT_IELSR14)
+     876      876        0     1                 .L0 
+     876      876        0     1                 .L0 
+     876      876        0     1                 $x
+     876      876        0     1                 .L0 
+     876      876        4     1                 INT_IELSR14
+     87a      87a        0     1                 .L0 
+     87a      87a        4     2         ./generate/inthandler.o:(.text.INT_IELSR15)
+     87a      87a        0     1                 .L0 
+     87a      87a        0     1                 .L0 
+     87a      87a        0     1                 $x
+     87a      87a        0     1                 .L0 
+     87a      87a        4     1                 INT_IELSR15
+     87e      87e        0     1                 .L0 
+     87e      87e        4     2         ./generate/inthandler.o:(.text.INT_IELSR16)
+     87e      87e        0     1                 .L0 
+     87e      87e        0     1                 .L0 
+     87e      87e        0     1                 $x
+     87e      87e        0     1                 .L0 
+     87e      87e        4     1                 INT_IELSR16
+     882      882        0     1                 .L0 
+     882      882        4     2         ./generate/inthandler.o:(.text.INT_IELSR17)
+     882      882        0     1                 .L0 
+     882      882        0     1                 .L0 
+     882      882        0     1                 $x
+     882      882        0     1                 .L0 
+     882      882        4     1                 INT_IELSR17
+     886      886        0     1                 .L0 
+     886      886        4     2         ./generate/inthandler.o:(.text.INT_IELSR18)
+     886      886        0     1                 .L0 
+     886      886        0     1                 .L0 
+     886      886        0     1                 $x
+     886      886        0     1                 .L0 
+     886      886        4     1                 INT_IELSR18
+     88a      88a        0     1                 .L0 
+     88a      88a        4     2         ./generate/inthandler.o:(.text.INT_IELSR19)
+     88a      88a        0     1                 .L0 
+     88a      88a        0     1                 .L0 
+     88a      88a        0     1                 $x
+     88a      88a        0     1                 .L0 
+     88a      88a        4     1                 INT_IELSR19
+     88e      88e        0     1                 .L0 
+     88e      88e        4     2         ./generate/inthandler.o:(.text.INT_IELSR20)
+     88e      88e        0     1                 .L0 
+     88e      88e        0     1                 .L0 
+     88e      88e        0     1                 $x
+     88e      88e        0     1                 .L0 
+     88e      88e        4     1                 INT_IELSR20
+     892      892        0     1                 .L0 
+     892      892        4     2         ./generate/inthandler.o:(.text.INT_IELSR21)
+     892      892        0     1                 .L0 
+     892      892        0     1                 .L0 
+     892      892        0     1                 $x
+     892      892        0     1                 .L0 
+     892      892        4     1                 INT_IELSR21
+     896      896        0     1                 .L0 
+     896      896        4     2         ./generate/inthandler.o:(.text.INT_IELSR22)
+     896      896        0     1                 .L0 
+     896      896        0     1                 .L0 
+     896      896        0     1                 $x
+     896      896        0     1                 .L0 
+     896      896        4     1                 INT_IELSR22
+     89a      89a        0     1                 .L0 
+     89a      89a        4     2         ./generate/inthandler.o:(.text.INT_IELSR23)
+     89a      89a        0     1                 .L0 
+     89a      89a        0     1                 .L0 
+     89a      89a        0     1                 $x
+     89a      89a        0     1                 .L0 
+     89a      89a        4     1                 INT_IELSR23
+     89e      89e        0     1                 .L0 
+     89e      89e        4     2         ./generate/inthandler.o:(.text.INT_IELSR24)
+     89e      89e        0     1                 .L0 
+     89e      89e        0     1                 .L0 
+     89e      89e        0     1                 $x
+     89e      89e        0     1                 .L0 
+     89e      89e        4     1                 INT_IELSR24
+     8a2      8a2        0     1                 .L0 
+     8a2      8a2        4     2         ./generate/inthandler.o:(.text.INT_IELSR25)
+     8a2      8a2        0     1                 .L0 
+     8a2      8a2        0     1                 .L0 
+     8a2      8a2        0     1                 $x
+     8a2      8a2        0     1                 .L0 
+     8a2      8a2        4     1                 INT_IELSR25
+     8a6      8a6        0     1                 .L0 
+     8a6      8a6        4     2         ./generate/inthandler.o:(.text.INT_IELSR26)
+     8a6      8a6        0     1                 .L0 
+     8a6      8a6        0     1                 .L0 
+     8a6      8a6        0     1                 $x
+     8a6      8a6        0     1                 .L0 
+     8a6      8a6        4     1                 INT_IELSR26
+     8aa      8aa        0     1                 .L0 
+     8aa      8aa        4     2         ./generate/inthandler.o:(.text.INT_IELSR27)
+     8aa      8aa        0     1                 .L0 
+     8aa      8aa        0     1                 .L0 
+     8aa      8aa        0     1                 $x
+     8aa      8aa        0     1                 .L0 
+     8aa      8aa        4     1                 INT_IELSR27
+     8ae      8ae        0     1                 .L0 
+     8ae      8ae        4     2         ./generate/inthandler.o:(.text.INT_IELSR28)
+     8ae      8ae        0     1                 .L0 
+     8ae      8ae        0     1                 .L0 
+     8ae      8ae        0     1                 $x
+     8ae      8ae        0     1                 .L0 
+     8ae      8ae        4     1                 INT_IELSR28
+     8b2      8b2        0     1                 .L0 
+     8b2      8b2        4     2         ./generate/inthandler.o:(.text.INT_IELSR29)
+     8b2      8b2        0     1                 .L0 
+     8b2      8b2        0     1                 .L0 
+     8b2      8b2        0     1                 $x
+     8b2      8b2        0     1                 .L0 
+     8b2      8b2        4     1                 INT_IELSR29
+     8b6      8b6        0     1                 .L0 
+     8b6      8b6        4     2         ./generate/inthandler.o:(.text.INT_IELSR30)
+     8b6      8b6        0     1                 .L0 
+     8b6      8b6        0     1                 .L0 
+     8b6      8b6        0     1                 $x
+     8b6      8b6        0     1                 .L0 
+     8b6      8b6        4     1                 INT_IELSR30
+     8ba      8ba        0     1                 .L0 
+     8ba      8ba        4     2         ./generate/inthandler.o:(.text.INT_IELSR31)
+     8ba      8ba        0     1                 .L0 
+     8ba      8ba        0     1                 .L0 
+     8ba      8ba        0     1                 $x
+     8ba      8ba        0     1                 .L0 
+     8ba      8ba        4     1                 INT_IELSR31
+     8be      8be        0     1                 .L0 
+     8be      8be        4     2         ./generate/inthandler.o:(.text.INT_DUMMY)
+     8be      8be        0     1                 .L0 
+     8be      8be        0     1                 .L0 
+     8be      8be        0     1                 $x
+     8be      8be        0     1                 .L0 
+     8be      8be        4     1                 INT_DUMMY
+     8c2      8c2        0     1                 .L0 
+     8c2      8c2        2     2         ./generate/vects.o:(.text.nvect_function)
+     8c2      8c2        0     1                 .L0 
+     8c2      8c2        0     1                 .L0 
+     8c2      8c2        0     1                 $x
+     8c2      8c2        0     1                 .L0 
+     8c2      8c2        2     1                 nvect_function
+     8c4      8c4        0     1                 .L0 
+     8c4      8c4       36     2         ./generate/vects.o:(.text.initialize_vect)
+     8c4      8c4        0     1                 .L0 
+     8c4      8c4        0     1                 .L0 
+     8c4      8c4        0     1                 $x
+     8c4      8c4        0     1                 .L0 
+     8c4      8c4       36     1                 initialize_vect
+     8c6      8c6        0     1                 .L0 
+     8ca      8ca        0     1                 .L0 
+     8ce      8ce        0     1                 .L0 
+     8d2      8d2        0     1                 .L0 
+     8dc      8dc        0     1                 .L0 
+     8e0      8e0        0     1                 .L0 
+     8e0      8e0        0     1                 .L0 
+     8e0      8e0        0     1                 .L0 
+     8ee      8ee        0     1                 .L0 
+     8f0      8f0        0     1                 .L0 
+     8f4      8f4        0     1                 .L0 
+     8f8      8f8        0     1                 .L0 
+     8f8      8f8        0     1                 .L0 
+     8fa      8fa        0     1                 .L0 
+     8fa      8fa        0     1                 .L0 
+     8fa      8fa       1c     2         /home/user0/e2_studio/workspace/freertos_port/HardwareDebug/libfreertos_port.a(libc_a-exit.o):(.text.exit)
+     8fa      8fa        0     1                 $x
+     8fa      8fa       1c     1                 exit
+     912      912        0     1                 .L0 
+     916      916       cc     2         /home/user0/e2_studio/workspace/freertos_port/HardwareDebug/libfreertos_port.a(libc_a-__call_atexit.o):(.text.__call_exitprocs)
+     916      916        0     1                 $x
+     916      916       cc     1                 __call_exitprocs
+     93c      93c        0     1                 .L0 
+     94a      94a        0     1                 .L0 
+     94c      94c        0     1                 .L0 
+     964      964        0     1                 .L0 
+     96a      96a        0     1                 .L0 
+     980      980        0     1                 .L0 
+     994      994        0     1                 .L0 
+     9b4      9b4        0     1                 .L0 
+     9ba      9ba        0     1                 .L0 
+     9be      9be        0     1                 .L0 
+     9c4      9c4        0     1                 .L0 
+     9cc      9cc        0     1                 .L0 
+     9e2      9e2       5e     2         /home/user0/e2_studio/workspace/freertos_port/HardwareDebug/libfreertos_port.a(libc_a-init.o):(.text.__libc_init_array)
+     9e2      9e2        0     1                 $x
+     9e2      9e2       5e     1                 __libc_init_array
+     a06      a06        0     1                 .L0 
+     a10      a10        0     1                 .L0 
+     a2c      a2c        0     1                 .L0 
+     a36      a36        0     1                 .L0 
+     a40      a40       76     2         /home/user0/e2_studio/workspace/freertos_port/HardwareDebug/libfreertos_port.a(libc_a-memcpy.o):(.text.memcpy)
+     a40      a40        0     1                 $x
+     a40      a40       76     1                 memcpy
+     a4e      a4e        0     1                 .L0 
+     a50      a50        0     1                 .L0 
+     a52      a52        0     1                 .L0 
+     a56      a56        0     1                 .L0 
+     a6a      a6a        0     1                 .L0 
+     a6c      a6c        0     1                 .L0 
+     a70      a70        0     1                 .L0 
+     a96      a96        0     1                 .L0 
+     ab2      ab2        0     1                 .L0 
+     ab6      ab6       98     2         /home/user0/e2_studio/workspace/freertos_port/HardwareDebug/libfreertos_port.a(libc_a-memset.o):(.text.memset)
+     ab6      ab6        0     1                 $x
+     ab6      ab6       98     1                 memset
+     ac2      ac2        0     1                 .L0 
+     ae2      ae2        0     1                 .L0 
+     aea      aea        0     1                 .L0 
+     b02      b02        0     1                 .L0 
+     b1c      b1c        0     1                 .L0 
+     b1e      b1e        0     1                 .L0 
+     b2c      b2c        0     1                 .L0 
+     b2e      b2e        0     1                 .L0 
+     b30      b30        0     1                 .L0 
+     b3e      b3e        0     1                 .L0 
+     b40      b40        0     1                 .L0 
+     b48      b48        0     1                 .L0 
+     b4e      b4e        2     1 .rodata
+     b4e      b4e        2     1         . = ALIGN ( 4 )
+     b50      b50        0     1         __rodata = .
+     b50      b50        0     1         . = ALIGN ( 4 )
+     b50      b50        0     1         . = ALIGN ( 4 )
+     b50      b50        0     1         PROVIDE ( __preinit_array_start = . )
+     b50      b50        0     1         PROVIDE ( __preinit_array_end = . )
+     b50      b50        0     1         PROVIDE ( __init_array_start = . )
+     b50      b50        0     1         PROVIDE ( __init_array_end = . )
+     b50      b50        0     1         __erodata = .
+ 1010008  1010008        4     4 .option_secs
+ 1010008  1010008        4     4         ./generate/vects.o:(.option_secs)
+ 1010008  1010008        0     1                 $d
+ 1010008  1010008        4     1                 Option_SECS
+ 1010010  1010010        4     4 .option_aws
+ 1010010  1010010        4     4         ./generate/vects.o:(.option_aws)
+ 1010010  1010010        0     1                 $d
+ 1010010  1010010        4     1                 Option_AWS
+ 1010018  1010018        4     4 .option_uids0
+ 1010018  1010018        4     4         ./generate/vects.o:(.option_uids0)
+ 1010018  1010018        0     1                 $d
+ 1010018  1010018        4     1                 Option_UIDS0
+ 1010020  1010020        4     4 .option_uids1
+ 1010020  1010020        4     4         ./generate/vects.o:(.option_uids1)
+ 1010020  1010020        0     1                 $d
+ 1010020  1010020        4     1                 Option_UIDS1
+ 1010028  1010028        4     4 .option_uids2
+ 1010028  1010028        4     4         ./generate/vects.o:(.option_uids2)
+ 1010028  1010028        0     1                 $d
+ 1010028  1010028        4     1                 Option_UIDS2
+ 1010030  1010030        4     4 .option_uids3
+ 1010030  1010030        4     4         ./generate/vects.o:(.option_uids3)
+ 1010030  1010030        0     1                 $d
+ 1010030  1010030        4     1                 Option_UIDS3
+20004000 20004000        0     1 .data
+20004000 20004000        0     1         . = ALIGN ( 4 )
+20004000 20004000        0     1         PROVIDE ( __datastart = . )
+20004000 20004000        0     1         __data = .
+20004000 20004000        0     1         . = ALIGN ( 4 )
+20004000 20004000        0     1         __edata = .
+20004000 20004000        0     1 PROVIDE ( __romdatastart = LOADADDR ( .data ) )
+20004000 20004000        0     1 PROVIDE ( __romdatacopysize = SIZEOF ( .data ) )
+20000000 20000000        0     1 .data_eccram
+20000000 20000000        0     1         . = ALIGN ( 4 )
+20000000 20000000        0     1         PROVIDE ( __dataeccramstart = . )
+20000000 20000000        0     1         __data_eccram = .
+20000000 20000000        0     1         . = ALIGN ( 4 )
+20000000 20000000        0     1         __edata_eccram = .
+20000000 20000000        0     1 PROVIDE ( __romdataeccramstart = LOADADDR ( .data_eccram ) )
+20000000 20000000        0     1 PROVIDE ( __romdataeccramcopysize = SIZEOF ( .data_eccram ) )
+20004000 20004000        8     4 .bss
+20004000 20004000        0     1         . = ALIGN ( 4 )
+20004000 20004000        0     1         __bss = .
+20004000 20004000        4     4         /home/user0/e2_studio/workspace/freertos_port/HardwareDebug/libfreertos_port.a(libc_a-__call_atexit.o):(.sbss)
+20004000 20004000        0     1                 $d
+20004000 20004000        4     1                 __atexit
+20004004 20004004        4     4         /home/user0/e2_studio/workspace/freertos_port/HardwareDebug/libfreertos_port.a(libc_a-findfp.o):(.sbss)
+20004004 20004004        0     1                 $d
+20004004 20004004        4     1                 __stdio_exit_handler
+20004008 20004008        0     1         . = ALIGN ( 4 )
+20004008 20004008        0     1         . = ALIGN ( 4 )
+20004008 20004008        0     1         . = ALIGN ( 4 )
+20004008 20004008        0     1         __ebss = .
+20004008 20004008        0     1         end = .
+20000000 20000000        0     1 .bss_eccram
+20000000 20000000        0     1         . = ALIGN ( 4 )
+20000000 20000000        0     1         __bss_eccram = .
+20000000 20000000        0     1         . = ALIGN ( 4 )
+20000000 20000000        0     1         __ebss_eccram = .
+20000000 20000000        0     1 PROVIDE ( __stack_size = 0x200 )
+20006ffc 20006ffc        0     1 .stack
+20006ffc 20006ffc        0     1         PROVIDE ( __stack = . )
+20006ffc 20006ffc        0     1         
+       0        0       5b     1 .comment
+       0        0       5b     1         <internal>:(.comment)
+       0        0       49     1 .riscv.attributes
+       0        0       49     1         <internal>:(.riscv.attributes)
+       0        0     1cfe     1 .debug_loclists
+       0        0      22b     1         ./src/heap_4.o:(.debug_loclists)
+       0        0        0     1                 $d
+       c        c        0     1                 .L0 
+     22b      22b       5f     1         ./src/list.o:(.debug_loclists)
+     22b      22b        0     1                 $d
+     237      237        0     1                 .L0 
+     28a      28a       24     1         ./src/port.o:(.debug_loclists)
+     28a      28a        0     1                 $d
+     296      296        0     1                 .L0 
+     2ae      2ae      86d     1         ./src/queue.o:(.debug_loclists)
+     2ae      2ae        0     1                 $d
+     2ba      2ba        0     1                 .L0 
+     b1b      b1b      c07     1         ./src/tasks.o:(.debug_loclists)
+     b1b      b1b        0     1                 $d
+     b27      b27        0     1                 .L0 
+    1722     1722      5a3     1         ./src/timers.o:(.debug_loclists)
+    1722     1722        0     1                 $d
+    172e     172e        0     1                 .L0 
+    1cc5     1cc5       39     1         ./generate/vects.o:(.debug_loclists)
+    1cc5     1cc5        0     1                 $d
+    1cd1     1cd1        0     1                 .L0 
+       0        0      fb9     1 .debug_abbrev
+       0        0      1fb     1         ./src/heap_4.o:(.debug_abbrev)
+       0        0        0     1                 $d
+     1fb      1fb       c1     1         ./src/list.o:(.debug_abbrev)
+     1fb      1fb        0     1                 $d
+     2bc      2bc       d8     1         ./src/main.o:(.debug_abbrev)
+     2bc      2bc        0     1                 $d
+     394      394       ee     1         ./src/port.o:(.debug_abbrev)
+     394      394        0     1                 $d
+     482      482       1f     1         ./src/portASM.o:(.debug_abbrev)
+     482      482        0     1                 .L0 
+     482      482        0     1                 $d
+     4a1      4a1      2a8     1         ./src/queue.o:(.debug_abbrev)
+     4a1      4a1        0     1                 $d
+     749      749      361     1         ./src/tasks.o:(.debug_abbrev)
+     749      749        0     1                 $d
+     aaa      aaa      35b     1         ./src/timers.o:(.debug_abbrev)
+     aaa      aaa        0     1                 $d
+     e05      e05       21     1         ./generate/exit.o:(.debug_abbrev)
+     e05      e05        0     1                 .L0 
+     e05      e05        0     1                 $d
+     e26      e26       31     1         ./generate/inthandler.o:(.debug_abbrev)
+     e26      e26        0     1                 $d
+     e57      e57       21     1         ./generate/start.o:(.debug_abbrev)
+     e57      e57        0     1                 .L0 
+     e57      e57        0     1                 $d
+     e78      e78      141     1         ./generate/vects.o:(.debug_abbrev)
+     e78      e78        0     1                 $d
+       0        0     7225     1 .debug_info
+       0        0      37c     1         ./src/heap_4.o:(.debug_info)
+       0        0        0     1                 $d
+     37c      37c      1a8     1         ./src/list.o:(.debug_info)
+     37c      37c        0     1                 $d
+     524      524      19f     1         ./src/main.o:(.debug_info)
+     524      524        0     1                 $d
+     6c3      6c3      1a3     1         ./src/port.o:(.debug_info)
+     6c3      6c3        0     1                 $d
+     866      866      3a4     1         ./src/portASM.o:(.debug_info)
+     866      866        0     1                 .L0 
+     866      866        0     1                 $d
+     c0a      c0a      ea7     1         ./src/queue.o:(.debug_info)
+     c0a      c0a        0     1                 $d
+    1ab1     1ab1     1435     1         ./src/tasks.o:(.debug_info)
+    1ab1     1ab1        0     1                 $d
+    2ee6     2ee6      e49     1         ./src/timers.o:(.debug_info)
+    2ee6     2ee6        0     1                 $d
+    3d2f     3d2f       c4     1         ./generate/exit.o:(.debug_info)
+    3d2f     3d2f        0     1                 .L0 
+    3d2f     3d2f        0     1                 $d
+    3df3     3df3      1a9     1         ./generate/inthandler.o:(.debug_info)
+    3df3     3df3        0     1                 $d
+    3f9c     3f9c       ce     1         ./generate/start.o:(.debug_info)
+    3f9c     3f9c        0     1                 .L0 
+    3f9c     3f9c        0     1                 $d
+    406a     406a     31bb     1         ./generate/vects.o:(.debug_info)
+    406a     406a        0     1                 $d
+       0        0      456     1 .debug_rnglists
+       0        0       2f     1         ./src/heap_4.o:(.debug_rnglists)
+       0        0        0     1                 $d
+       c        c        0     1                 .L0 
+      2f       2f       20     1         ./src/list.o:(.debug_rnglists)
+      2f       2f        0     1                 $d
+      3b       3b        0     1                 .L0 
+      4f       4f       20     1         ./src/main.o:(.debug_rnglists)
+      4f       4f        0     1                 $d
+      5b       5b        0     1                 .L0 
+      6f       6f       1a     1         ./src/port.o:(.debug_rnglists)
+      6f       6f        0     1                 $d
+      7b       7b        0     1                 .L0 
+      89       89       30     1         ./src/portASM.o:(.debug_rnglists)
+      89       89        0     1                 $d
+      95       95        0     1                 .L0 
+      b9       b9      12b     1         ./src/queue.o:(.debug_rnglists)
+      b9       b9        0     1                 $d
+      c5       c5        0     1                 .L0 
+     1e4      1e4      10e     1         ./src/tasks.o:(.debug_rnglists)
+     1e4      1e4        0     1                 $d
+     1f0      1f0        0     1                 .L0 
+     2f2      2f2       d3     1         ./src/timers.o:(.debug_rnglists)
+     2f2      2f2        0     1                 $d
+     2fe      2fe        0     1                 .L0 
+     3c5      3c5       7a     1         ./generate/inthandler.o:(.debug_rnglists)
+     3c5      3c5        0     1                 $d
+     3d1      3d1        0     1                 .L0 
+     43f      43f       17     1         ./generate/vects.o:(.debug_rnglists)
+     43f      43f        0     1                 $d
+     44b      44b        0     1                 .L0 
+       0        0     134c     1 .debug_str_offsets
+       0        0      124     1         ./src/heap_4.o:(.debug_str_offsets)
+       0        0        0     1                 $d
+       8        8        0     1                 .L0 
+     124      124       8c     1         ./src/list.o:(.debug_str_offsets)
+     124      124        0     1                 $d
+     12c      12c        0     1                 .L0 
+     1b0      1b0       98     1         ./src/main.o:(.debug_str_offsets)
+     1b0      1b0        0     1                 $d
+     1b8      1b8        0     1                 .L0 
+     248      248       94     1         ./src/port.o:(.debug_str_offsets)
+     248      248        0     1                 $d
+     250      250        0     1                 .L0 
+     2dc      2dc      258     1         ./src/queue.o:(.debug_str_offsets)
+     2dc      2dc        0     1                 $d
+     2e4      2e4        0     1                 .L0 
+     534      534      384     1         ./src/tasks.o:(.debug_str_offsets)
+     534      534        0     1                 $d
+     53c      53c        0     1                 .L0 
+     8b8      8b8      2c4     1         ./src/timers.o:(.debug_str_offsets)
+     8b8      8b8        0     1                 $d
+     8c0      8c0        0     1                 .L0 
+     b7c      b7c       a0     1         ./generate/inthandler.o:(.debug_str_offsets)
+     b7c      b7c        0     1                 $d
+     b84      b84        0     1                 .L0 
+     c1c      c1c      730     1         ./generate/vects.o:(.debug_str_offsets)
+     c1c      c1c        0     1                 $d
+     c24      c24        0     1                 .L0 
+       0        0     3731     1 .debug_str
+       0        0     3731     1         <internal>:(.debug_str)
+       0        0      6d4     1 .debug_addr
+       0        0       74     1         ./src/heap_4.o:(.debug_addr)
+       0        0        0     1                 $d
+       8        8        0     1                 .L0 
+      74       74       1c     1         ./src/list.o:(.debug_addr)
+      74       74        0     1                 $d
+      7c       7c        0     1                 .L0 
+      90       90       1c     1         ./src/main.o:(.debug_addr)
+      90       90        0     1                 $d
+      98       98        0     1                 .L0 
+      ac       ac       40     1         ./src/port.o:(.debug_addr)
+      ac       ac        0     1                 $d
+      b4       b4        0     1                 .L0 
+      ec       ec      19c     1         ./src/queue.o:(.debug_addr)
+      ec       ec        0     1                 $d
+      f4       f4        0     1                 .L0 
+     288      288      23c     1         ./src/tasks.o:(.debug_addr)
+     288      288        0     1                 $d
+     290      290        0     1                 .L0 
+     4c4      4c4      138     1         ./src/timers.o:(.debug_addr)
+     4c4      4c4        0     1                 $d
+     4cc      4cc        0     1                 .L0 
+     5fc      5fc       94     1         ./generate/inthandler.o:(.debug_addr)
+     5fc      5fc        0     1                 $d
+     604      604        0     1                 .L0 
+     690      690       44     1         ./generate/vects.o:(.debug_addr)
+     690      690        0     1                 $d
+     698      698        0     1                 .L0 
+       0        0      bbc     4 .debug_frame
+       0        0       d4     4         ./src/heap_4.o:(.debug_frame)
+       0        0        0     1                 .L0 
+       0        0        0     1                 $d
+      d4       d4       64     4         ./src/list.o:(.debug_frame)
+      d4       d4        0     1                 .L0 
+      d4       d4        0     1                 $d
+     138      138       6c     4         ./src/main.o:(.debug_frame)
+     138      138        0     1                 .L0 
+     138      138        0     1                 $d
+     1a4      1a4       50     4         ./src/port.o:(.debug_frame)
+     1a4      1a4        0     1                 .L0 
+     1a4      1a4        0     1                 $d
+     1f4      1f4      244     4         ./src/queue.o:(.debug_frame)
+     1f4      1f4        0     1                 .L0 
+     1f4      1f4        0     1                 $d
+     438      438      334     4         ./src/tasks.o:(.debug_frame)
+     438      438        0     1                 .L0 
+     438      438        0     1                 $d
+     76c      76c      1d8     4         ./src/timers.o:(.debug_frame)
+     76c      76c        0     1                 .L0 
+     76c      76c        0     1                 $d
+     944      944      244     4         ./generate/inthandler.o:(.debug_frame)
+     944      944        0     1                 .L0 
+     944      944        0     1                 $d
+     b88      b88       34     4         ./generate/vects.o:(.debug_frame)
+     b88      b88        0     1                 .L0 
+     b88      b88        0     1                 $d
+       0        0     5cb2     1 .debug_line
+       0        0      6fa     1         ./src/heap_4.o:(.debug_line)
+       0        0        0     1                 .Lline_table_start0
+       0        0        0     1                 $d
+     6fa      6fa      2be     1         ./src/list.o:(.debug_line)
+     6fa      6fa        0     1                 .Lline_table_start0
+     6fa      6fa        0     1                 $d
+     9b8      9b8      128     1         ./src/main.o:(.debug_line)
+     9b8      9b8        0     1                 .Lline_table_start0
+     9b8      9b8        0     1                 $d
+     ae0      ae0      187     1         ./src/port.o:(.debug_line)
+     ae0      ae0        0     1                 .Lline_table_start0
+     ae0      ae0        0     1                 $d
+     c67      c67      bac     1         ./src/portASM.o:(.debug_line)
+     c67      c67        0     1                 .Lline_table_start0
+     c67      c67        0     1                 $d
+    1813     1813     1761     1         ./src/queue.o:(.debug_line)
+    1813     1813        0     1                 .Lline_table_start0
+    1813     1813        0     1                 $d
+    2f74     2f74     1bc5     1         ./src/tasks.o:(.debug_line)
+    2f74     2f74        0     1                 .Lline_table_start0
+    2f74     2f74        0     1                 $d
+    4b39     4b39      bf4     1         ./src/timers.o:(.debug_line)
+    4b39     4b39        0     1                 .Lline_table_start0
+    4b39     4b39        0     1                 $d
+    572d     572d       5f     1         ./generate/exit.o:(.debug_line)
+    572d     572d        0     1                 .Lline_table_start0
+    572d     572d        0     1                 $d
+    578c     578c      33f     1         ./generate/inthandler.o:(.debug_line)
+    578c     578c        0     1                 .Lline_table_start0
+    578c     578c        0     1                 $d
+    5acb     5acb       e5     1         ./generate/start.o:(.debug_line)
+    5acb     5acb        0     1                 .Lline_table_start0
+    5acb     5acb        0     1                 $d
+    5bb0     5bb0      102     1         ./generate/vects.o:(.debug_line)
+    5bb0     5bb0        0     1                 .Lline_table_start0
+    5bb0     5bb0        0     1                 $d
+       0        0      598     1 .debug_line_str
+       0        0      598     1         <internal>:(.debug_line_str)
+       0        0       80     1 .debug_aranges
+       0        0       40     1         ./src/portASM.o:(.debug_aranges)
+       0        0        0     1                 $d
+      40       40       20     1         ./generate/exit.o:(.debug_aranges)
+      40       40        0     1                 $d
+      60       60       20     1         ./generate/start.o:(.debug_aranges)
+      60       60        0     1                 $d
+       0        0     1510     4 .symtab
+       0        0     1510     4         <internal>:(.symtab)
+       0        0      1a2     1 .shstrtab
+       0        0      1a2     1         <internal>:(.shstrtab)
+       0        0      802     1 .strtab
+       0        0      802     1         <internal>:(.strtab)
+
+Cross Reference Table
+
+Symbol                                            File
+memset                                            /home/user0/e2_studio/workspace/freertos_port/HardwareDebug/libfreertos_port.a(libc_a-memset.o)
+                                                  ./src/heap_4.o
+                                                  ./src/tasks.o
+                                                  ./generate/start.o
+                                                  /home/user0/e2_studio/workspace/freertos_port/HardwareDebug/libfreertos_port.a(libc_a-findfp.o)
+main                                              ./src/main.o
+                                                  ./generate/start.o
+memcpy                                            /home/user0/e2_studio/workspace/freertos_port/HardwareDebug/libfreertos_port.a(libc_a-memcpy.o)
+                                                  ./src/queue.o
+                                                  ./generate/start.o
+_exit                                             ./generate/exit.o
+                                                  /home/user0/e2_studio/workspace/freertos_port/HardwareDebug/libfreertos_port.a(libc_a-exit.o)
+INT_ACLINT_MSIP                                   ./generate/inthandler.o
+                                                  ./generate/vects.o
+INT_ACLINT_MTIP                                   ./generate/inthandler.o
+                                                  ./generate/vects.o
+INT_IELSR0                                        ./generate/inthandler.o
+                                                  ./generate/vects.o
+INT_IELSR1                                        ./generate/inthandler.o
+                                                  ./generate/vects.o
+INT_IELSR2                                        ./generate/inthandler.o
+                                                  ./generate/vects.o
+INT_IELSR3                                        ./generate/inthandler.o
+                                                  ./generate/vects.o
+INT_IELSR4                                        ./generate/inthandler.o
+                                                  ./generate/vects.o
+INT_IELSR5                                        ./generate/inthandler.o
+                                                  ./generate/vects.o
+INT_IELSR6                                        ./generate/inthandler.o
+                                                  ./generate/vects.o
+INT_IELSR7                                        ./generate/inthandler.o
+                                                  ./generate/vects.o
+INT_IELSR8                                        ./generate/inthandler.o
+                                                  ./generate/vects.o
+INT_IELSR9                                        ./generate/inthandler.o
+                                                  ./generate/vects.o
+INT_IELSR10                                       ./generate/inthandler.o
+                                                  ./generate/vects.o
+INT_IELSR11                                       ./generate/inthandler.o
+                                                  ./generate/vects.o
+INT_IELSR12                                       ./generate/inthandler.o
+                                                  ./generate/vects.o
+INT_IELSR13                                       ./generate/inthandler.o
+                                                  ./generate/vects.o
+INT_IELSR14                                       ./generate/inthandler.o
+                                                  ./generate/vects.o
+INT_IELSR15                                       ./generate/inthandler.o
+                                                  ./generate/vects.o
+INT_IELSR16                                       ./generate/inthandler.o
+                                                  ./generate/vects.o
+INT_IELSR17                                       ./generate/inthandler.o
+                                                  ./generate/vects.o
+INT_IELSR18                                       ./generate/inthandler.o
+                                                  ./generate/vects.o
+INT_IELSR19                                       ./generate/inthandler.o
+                                                  ./generate/vects.o
+INT_IELSR20                                       ./generate/inthandler.o
+                                                  ./generate/vects.o
+INT_IELSR21                                       ./generate/inthandler.o
+                                                  ./generate/vects.o
+INT_IELSR22                                       ./generate/inthandler.o
+                                                  ./generate/vects.o
+INT_IELSR23                                       ./generate/inthandler.o
+                                                  ./generate/vects.o
+INT_IELSR24                                       ./generate/inthandler.o
+                                                  ./generate/vects.o
+INT_IELSR25                                       ./generate/inthandler.o
+                                                  ./generate/vects.o
+INT_IELSR26                                       ./generate/inthandler.o
+                                                  ./generate/vects.o
+INT_IELSR27                                       ./generate/inthandler.o
+                                                  ./generate/vects.o
+INT_IELSR28                                       ./generate/inthandler.o
+                                                  ./generate/vects.o
+INT_IELSR29                                       ./generate/inthandler.o
+                                                  ./generate/vects.o
+INT_IELSR30                                       ./generate/inthandler.o
+                                                  ./generate/vects.o
+INT_IELSR31                                       ./generate/inthandler.o
+                                                  ./generate/vects.o
+INT_DUMMY                                         ./generate/inthandler.o
+                                                  ./generate/vects.o
+_PowerON_Reset                                    ./generate/start.o
+__global_pointer$                                 <internal>
+                                                  ./generate/start.o
+__stack                                           /home/user0/e2_studio/workspace/freertos_port/generate/linker_script.ld:194
+                                                  ./generate/start.o
+__bss                                             /home/user0/e2_studio/workspace/freertos_port/generate/linker_script.ld:167
+                                                  ./generate/start.o
+__ebss                                            /home/user0/e2_studio/workspace/freertos_port/generate/linker_script.ld:176
+                                                  ./generate/start.o
+__datastart                                       /home/user0/e2_studio/workspace/freertos_port/generate/linker_script.ld:135
+                                                  ./generate/start.o
+__romdatastart                                    /home/user0/e2_studio/workspace/freertos_port/generate/linker_script.ld:145
+                                                  ./generate/start.o
+__romdatacopysize                                 /home/user0/e2_studio/workspace/freertos_port/generate/linker_script.ld:146
+                                                  ./generate/start.o
+__dataeccramstart                                 /home/user0/e2_studio/workspace/freertos_port/generate/linker_script.ld:152
+                                                  ./generate/start.o
+__romdataeccramstart                              /home/user0/e2_studio/workspace/freertos_port/generate/linker_script.ld:160
+                                                  ./generate/start.o
+__romdataeccramcopysize                           /home/user0/e2_studio/workspace/freertos_port/generate/linker_script.ld:161
+                                                  ./generate/start.o
+__libc_init_array                                 /home/user0/e2_studio/workspace/freertos_port/HardwareDebug/libfreertos_port.a(libc_a-init.o)
+                                                  ./generate/start.o
+initialize_vect                                   ./generate/vects.o
+                                                  ./generate/start.o
+exit                                              /home/user0/e2_studio/workspace/freertos_port/HardwareDebug/libfreertos_port.a(libc_a-exit.o)
+                                                  ./generate/start.o
+nvect_function                                    ./generate/vects.o
+InterruptVectors                                  ./generate/vects.o
+ExceptVectors                                     ./generate/vects.o
+Option_OFS0                                       ./generate/vects.o
+Option_OFS1                                       ./generate/vects.o
+Option_FPR                                        ./generate/vects.o
+Option_OSIS                                       ./generate/vects.o
+Option_SECS                                       ./generate/vects.o
+Option_AWS                                        ./generate/vects.o
+Option_UIDS0                                      ./generate/vects.o
+Option_UIDS1                                      ./generate/vects.o
+Option_UIDS2                                      ./generate/vects.o
+Option_UIDS3                                      ./generate/vects.o
+__call_exitprocs                                  /home/user0/e2_studio/workspace/freertos_port/HardwareDebug/libfreertos_port.a(libc_a-__call_atexit.o)
+                                                  /home/user0/e2_studio/workspace/freertos_port/HardwareDebug/libfreertos_port.a(libc_a-exit.o)
+__stdio_exit_handler                              /home/user0/e2_studio/workspace/freertos_port/HardwareDebug/libfreertos_port.a(libc_a-findfp.o)
+                                                  /home/user0/e2_studio/workspace/freertos_port/HardwareDebug/libfreertos_port.a(libc_a-exit.o)
+__atexit                                          /home/user0/e2_studio/workspace/freertos_port/HardwareDebug/libfreertos_port.a(libc_a-__call_atexit.o)
+__preinit_array_start                             /home/user0/e2_studio/workspace/freertos_port/generate/linker_script.ld:78
+                                                  /home/user0/e2_studio/workspace/freertos_port/HardwareDebug/libfreertos_port.a(libc_a-init.o)
+__preinit_array_end                               /home/user0/e2_studio/workspace/freertos_port/generate/linker_script.ld:80
+                                                  /home/user0/e2_studio/workspace/freertos_port/HardwareDebug/libfreertos_port.a(libc_a-init.o)
+__init_array_start                                /home/user0/e2_studio/workspace/freertos_port/generate/linker_script.ld:81
+                                                  /home/user0/e2_studio/workspace/freertos_port/HardwareDebug/libfreertos_port.a(libc_a-init.o)
+__init_array_end                                  /home/user0/e2_studio/workspace/freertos_port/generate/linker_script.ld:84
+                                                  /home/user0/e2_studio/workspace/freertos_port/HardwareDebug/libfreertos_port.a(libc_a-init.o)
+end                                               /home/user0/e2_studio/workspace/freertos_port/generate/linker_script.ld:177
+                                                  /home/user0/custom_installed/e2_studio/toolchains/llvm-19.1.7.202501-riscv-elf/llvm-for-renesas-riscv/bin/../lib/clang-runtimes/riscv32-unknown-elf/rv32imaczba_zbb_zbs/ilp32/lib/libnosys.a(sbrk.o)

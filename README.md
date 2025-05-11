@@ -113,6 +113,7 @@ First, include the `iodefine.h` in your `main.c` since it has the definition of 
 
 Then add following code in the main function before calling any task initialization.
 
+This file (alongwith everything it needs such as headers, assembly files) has to be added in the src directory instead of or `portable` directory, as the files included in that directory will be directly compiled by default by the compiler settings of e2 studio.
 
 ```
 /* Configure and enable the Machine Timer for FreeRTOS tick. */
@@ -122,3 +123,95 @@ R_CPU_AUX->MACTCR_b.ENABLE = 1;      // Enable the MTIME counter
 ```
 
 Once these are added, building the project will generate some include errors. All the include errors should be resolved through adding the files in the include options of the project instead of changing the include statements.
+
+## `main.c`
+
+Once above files are added, proceed towards adding the `main.c` file. 
+
+A blink `main.c` file, at its simplest, looks something as follows.
+
+```
+/* Standard includes. */
+#include <stdio.h>
+#include <string.h>
+
+/* FreeRTOS includes. */
+#include "FreeRTOS.h"
+#include "task.h"
+#include "queue.h"
+#include "semphr.h"
+
+/* Hardware includes - REPLACE THIS WITH YOUR RA02G21 HEADER */
+#include "iodefine.h"
+
+/* Task priorities. */
+#define mainTASK_BLINKY_PRIORITY    ( tskIDLE_PRIORITY + 1 )
+
+/* Queue length. */
+#define mainQUEUE_LENGTH            ( 5 )
+
+/* Task handles. */
+static TaskHandle_t xBlinkyTask = NULL;
+
+/* Queue handle. */
+static QueueHandle_t xIntegerQueue = NULL;
+
+/*-----------------------------------------------------------*/
+
+/* Function prototypes. */
+static void prvBlinkyTask( void *pvParameters );
+static void prvSetupHardware( void );
+
+/*-----------------------------------------------------------*/
+
+
+void vApplicationMallocFailedHook( void )
+{
+	/* vApplicationMallocFailedHook() will only be called if
+	configUSE_MALLOC_FAILED_HOOK is set to 1 in FreeRTOSConfig.h.  It is a hook
+	function that will get called if a call to pvPortMalloc() fails.
+	pvPortMalloc() is called internally by the kernel whenever a task, queue,
+	timer or semaphore is created.  It is also called by various parts of the
+	demo application.  If heap_1.c, heap_2.c or heap_4.c are used, then the size
+	of the heap available to pvPortMalloc() is defined by configTOTAL_HEAP_SIZE
+	in FreeRTOSConfig.h, and the xPortGetFreeHeapSize() API function can be used
+	to query the size of free heap space that remains (although it does not
+	provide information on how the remaining heap might be fragmented). */
+	taskDISABLE_INTERRUPTS();
+	for( ;; );
+}
+
+void vApplicationIdleHook( void )
+{
+	/* vApplicationIdleHook() will only be called if configUSE_IDLE_HOOK is set
+	to 1 in FreeRTOSConfig.h.  It will be called on each iteration of the idle
+	task.  It is essential that code added to this hook function never attempts
+	to block in any way (for example, call xQueueReceive() with a block time
+	specified, or call vTaskDelay()).  If the application makes use of the
+	vTaskDelete() API function (as this demo application does) then it is also
+	important that vApplicationIdleHook() is permitted to return to its calling
+	function, because it is the responsibility of the idle task to clean up
+	memory allocated by the kernel to any task that has since been deleted. */
+}
+
+void vApplicationGetTimerTaskMemory( void )
+{
+}
+
+void vApplicationGetIdleTaskMemory( StaticTask_t ** ppxIdleTaskTCBBuffer,
+                                    StackType_t ** ppxIdleTaskStackBuffer,
+                                    configSTACK_DEPTH_TYPE * puxIdleTaskStackSize )
+{
+}
+
+
+int main( void )
+{
+}
+/*-----------------------------------------------------------*/
+
+```
+
+Note that the functions `vApplicationGetIdleTaskMemory`, `vApplicationIdleHook`, `vApplicationGetTimerTaskMemory`, and `vApplicationMallocFailedHook` are the functions which have to be added in the `main.c` file and the FreeRTOS expects these files, else you will get lld linker errors with llvm toolchain of e2 studio.
+
+

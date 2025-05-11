@@ -1,0 +1,10 @@
+################################################################################
+# Automatically-generated file. Do not edit!
+################################################################################
+
+arg1 = $(1)
+export PATH=/home/user0/custom_installed/e2_studio/toolchains/llvm-19.1.7.202501-riscv-elf/llvm-for-renesas-riscv/bin/::/home/user0/custom_installed/e2_studio/eclipse/plugins/com.renesas.ide.exttools.gnumake.linux.x86_64_1.0.1.v20240909-0854/mk/:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/snap/bin
+export TCINSTALL=/home/user0/custom_installed/e2_studio/toolchains/llvm-19.1.7.202501-riscv-elf/llvm-for-renesas-riscv/
+export CWD=$(CURDIR)
+export TC_VERSION=19.1.7.202501
+export PWD=$(CURDIR)
