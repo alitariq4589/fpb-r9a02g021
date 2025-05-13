@@ -51,7 +51,7 @@ SECTIONS
 	{
 		*(.text)
 		*(.text.*)
-		KEEP (*(.text.freertos_risc_v_interrupt_handler))
+		KEEP (*(.text.freertos_risc_v*))
 		/*INPUT_SECTION_FLAGS(SHF_EXECINSTR) *(*_n)*/
 	} >ROM AT>ROM
 	

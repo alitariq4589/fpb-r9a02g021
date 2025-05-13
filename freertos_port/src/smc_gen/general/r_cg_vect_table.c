@@ -319,10 +319,11 @@ void initialize_vect(void)
 //    asm( "li t0, 0x1C2" );
 //    asm( "csrw mtvec, t0" );    /* Set mtvec. */
 //    __asm__ volatile ( "csrw mtvec, %0" : : "r" ( freertos_risc_v_trap_handler ) );
-	__asm__ volatile ( "csrw mtvec, %0" : : "r" ( freertos_risc_v_application_exception_handler ) );
+	__asm__ volatile ( "csrw mtvec, %0" : : "r" ( freertos_risc_v_trap_handler ) );
     /* The mtvt register must be set when using the interrupt vector table. */
     /* Set the value (address of VECT_SECT(0xC0) >> 6) to mtvt[31:6] */
     /* mtvt.MTVT = 0x03; */
     asm( "li t0, 0xC0" );
-    asm( "csrw mtvt, t0" );    /* Set mtvt. */
+//    asm( "csrw mtvt, t0" );    /* Set mtvt. */
+    __asm__ volatile ( "csrw mtvec, %0" : : "r" ( freertos_risc_v_trap_handler ) );
 };
