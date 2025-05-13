@@ -10,8 +10,14 @@ RM := rm -rf
 
 # All of the sources participating in the build are defined here
 -include sources.mk
+-include src/smc_gen/r_pincfg/subdir.mk
+-include src/smc_gen/r_bsp/mcu/r9a02g021/subdir.mk
+-include src/smc_gen/r_bsp/mcu/all/subdir.mk
+-include src/smc_gen/r_bsp/board/generic_r9a02g021/subdir.mk
+-include src/smc_gen/general/subdir.mk
+-include src/smc_gen/Config_PORT/subdir.mk
+-include src/smc_gen/Config_ICU/subdir.mk
 -include src/subdir.mk
--include generate/subdir.mk
 -include subdir.mk
 -include objects.mk
 

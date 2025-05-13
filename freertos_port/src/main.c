@@ -7,6 +7,7 @@
 #include "task.h"
 #include "queue.h"
 #include "semphr.h"
+#include "r_smc_entry.h"
 
 /* Hardware includes - REPLACE THIS WITH YOUR RA02G21 HEADER */
 #include "iodefine.h"
@@ -26,11 +27,40 @@ static QueueHandle_t xIntegerQueue = NULL;
 /*-----------------------------------------------------------*/
 
 /* Function prototypes. */
-static void prvBlinkyTask( void *pvParameters );
+static void prvBlinkyTask(void *pvParameters);
 static void prvSetupHardware( void );
 
 /*-----------------------------------------------------------*/
 
+// Since the clock settings are already done in the start.s, so in following function, the LED GPIO will be configured as output for LED blink function
+
+void prvSetupHardware()
+	{
+	    /* --- Clock Initialization (Example - Adapt for RA02G21) --- */
+		R_Config_ICU_IRQ4_Start();
+
+}
+
+
+//// Add the main blinky task
+//
+void prvBlinkyTask(void *pvParameters)
+{
+    TickType_t xDelayTime;
+    const TickType_t xDelay500ms = pdMS_TO_TICKS( 2000 ); // Example delay
+
+    /* Remove compiler warning about unused parameter. */
+
+
+
+
+    for( ;; )
+    {
+    	PIN_WRITE(LED2) = ~PIN_READ(LED2);
+        /* Delay for a bit. */
+        vTaskDelay( xDelay500ms );
+    }
+}
 
 void vApplicationMallocFailedHook( void )
 {
@@ -75,87 +105,32 @@ void vApplicationGetIdleTaskMemory( StaticTask_t ** ppxIdleTaskTCBBuffer,
 int main( void )
 {
     /* Perform any necessary hardware initialization. */
+
+
+    /* Configure and enable the Machine Timer for FreeRTOS tick. */
+    R_CPU_AUX->MACTCR_b.ENABLE = 0;      // First, disable the timer (good practice)
+    R_CPU_AUX->MACTCR_b.CLOCKSOURCE = 1; // Select the clock source (0 is an example, refer to the manual!)
+    R_CPU_AUX->MACTCR_b.ENABLE = 1;      // Enable the MTIME counter
     prvSetupHardware();
-//
-//    /* Configure and enable the Machine Timer for FreeRTOS tick. */
-//    R_CPU_AUX->MACTCR_b.ENABLE = 0;      // First, disable the timer (good practice)
-//    R_CPU_AUX->MACTCR_b.CLOCKSOURCE = 1; // Select the clock source (0 is an example, refer to the manual!)
-//    R_CPU_AUX->MACTCR_b.ENABLE = 1;      // Enable the MTIME counter
-//
-//    /* Create a simple queue. */
-//    xIntegerQueue = xQueueCreate( mainQUEUE_LENGTH, sizeof( uint32_t ) );
-//
-//    /* Create a blinky task. */
-//    xTaskCreate( prvBlinkyTask,       /* The function that implements the task. */
-//                 "Blinky",           /* The text name assigned to the task - for debug only. */
-//                 configMINIMAL_STACK_SIZE, /* The size of the stack to allocate to the task. */
-//                 NULL,               /* The parameter passed to the task - not used in this case. */
-//                 mainTASK_BLINKY_PRIORITY, /* The priority assigned to the task. */
-//                 &xBlinkyTask );     /* The task handle is not required, so NULL is passed. */
-//
-//    /* Start the FreeRTOS scheduler. */
-//    vTaskStartScheduler();
-//
-//    /* Should never reach here. */
-//    for( ;; );
-//    return 0;
-//}
-///*-----------------------------------------------------------*/
-//
-//static void prvBlinkyTask( void *pvParameters )
-//{
-//    TickType_t xDelayTime;
-//    const TickType_t xDelay200ms = pdMS_TO_TICKS( 200 );
-//    uint32_t ulLEDState = 0;
-//
-//    /* Remove compiler warning about unused parameter. */
-//    ( void ) pvParameters;
-//
-//    for( ;; )
-//    {
-//        /* Control an LED here. You'll need to use the RA02G21's
-//           register definitions from iodefine.h (or a similar header).
-//           Example (you will need to adapt this):
-//
-//           if (ulLEDState == 0) {
-//               // Set LED ON using iodefine.h macros for your LED pin
-//               // Example: P1.DOUT.BIT.B0 = 1;
-//               ulLEDState = 1;
-//           } else {
-//               // Set LED OFF
-//               // Example: P1.DOUT.BIT.B0 = 0;
-//               ulLEDState = 0;
-//           }
-//        */
-//
-//        /* Send the current LED state to the queue (optional). */
-//        xQueueSend( xIntegerQueue, &ulLEDState, 0 );
-//
-//        /* Delay for a bit. */
-////        vTaskDelay( xDelay200ms );
-//    }
-//}
-///*-----------------------------------------------------------*/
-//
-//static void prvSetupHardware( void )
-//{
-//    /* Configure the system clock and enable peripherals here.
-//       This is where you will need to add the code to:
-//
-//       1. Initialize the clock system for your RA02G21.
-//       2. Configure the GPIO pin connected to your LED as an output.
-//       3. **Crucially, configure and enable the MTIME timer for the FreeRTOS tick.**
-//
-//       You will use the register definitions from iodefine.h (or a similar
-//       header file for the RA02G21) to access the hardware registers.
-//
-//       Example for enabling MTIME (you will need to adapt the clock source):
-//
-//       CPU_AUX.MACTCR &= ~(0b11 << 1); // Clear CLOCKSOURCE bits
-//       CPU_AUX.MACTCR |= (0b00 << 1);  // Example: Select a clock source
-//       CPU_AUX.MACTCR |= (1 << 0);     // Enable MTIME
-//    */
-//
-//    /* Placeholder for hardware initialization. */
+
+    //    /* Create a simple queue. */
+        xIntegerQueue = xQueueCreate( mainQUEUE_LENGTH, sizeof( uint32_t ) );
+
+    /* Create the blinky task. */
+    xTaskCreate( prvBlinkyTask,       /* The function that implements the task. */
+                 "Blinky",           /* The text name assigned to the task - for debug only. */
+                 configMINIMAL_STACK_SIZE, /* The size of the stack to allocate to the task. */
+                 NULL,               /* The parameter passed to the task. */
+                 mainTASK_BLINKY_PRIORITY, /* The priority of the task. */
+                 &xBlinkyTask );     /* The task handle. */
+    vTaskStartScheduler();
+
+
+
+
+    /* Should never reach here. */
+    for( ;; );
+    return 0;
+
 }
 /*-----------------------------------------------------------*/

@@ -56,6 +56,12 @@ S_UPPER_DEPS :=
 
 # Every subdirectory with source files must be described here
 SUBDIRS := \
-generate \
 src \
+src/smc_gen/Config_ICU \
+src/smc_gen/Config_PORT \
+src/smc_gen/general \
+src/smc_gen/r_bsp/board/generic_r9a02g021 \
+src/smc_gen/r_bsp/mcu/all \
+src/smc_gen/r_bsp/mcu/r9a02g021 \
+src/smc_gen/r_pincfg \
 

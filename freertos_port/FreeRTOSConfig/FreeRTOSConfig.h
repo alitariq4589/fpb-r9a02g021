@@ -7,13 +7,22 @@
  * for now. We will replace this with the actual value from the RA02G21
  * Hardware Manual.
  */
-#define configCPU_CLOCK_HZ          ( 500000UL ) // Default System oscillator is MOCO and it is operating on 8MHz and default clock divider is 1/16 so frequency comes out to be 500kHz
+#define configCPU_CLOCK_HZ          ( 48000000UL ) // Default System oscillator is MOCO and it is operating on 8MHz and default clock divider is 1/16 so frequency comes out to be 500kHz
+
+
+#define configNUMBER_OF_CORES  ( 1 )
 
 /* Define the total heap size for FreeRTOS. Adjust as needed. */
-#define configTOTAL_HEAP_SIZE       ( 16384 ) /* Size in bytes */
+#define configTOTAL_HEAP_SIZE       ( 4096 ) /* Size in bytes */
 
 /* Minimum stack size for tasks (in words). */
 #define configMINIMAL_STACK_SIZE    ( 128 )
+
+// Disable static allocation for kernel tasks so we dont have to use and define functions like vApplicationGetIdleTaskMemory
+
+
+#define configSUPPORT_DYNAMIC_ALLOCATION    1
+
 
 /* Stack type used by FreeRTOS tasks. */
 #define configTASK_STACK_DEPTH_TYPE  uint32_t
@@ -29,7 +38,7 @@
 #define configKERNEL_INTERRUPT_PRIORITY      ( 5 ) /* Example value, needs verification */
 
 /* Hook function related definitions. */
-#define configUSE_IDLE_HOOK             ( 1 )
+#define configUSE_IDLE_HOOK             ( 0 )
 #define configUSE_TICK_HOOK             ( 0 )
 #define configCHECK_FOR_STACK_OVERFLOW  ( 2 ) /* Or 1 if you want basic checking */
 #define configUSE_MALLOC_FAILED_HOOK    ( 1 )
@@ -39,7 +48,7 @@
 #define configUSE_TIME_SLICING          ( 1 )
 #define configIDLE_SHOULD_YIELD         ( 1 )
 #define configUSE_TASK_NOTIFICATIONS    ( 1 )
-#define configSUPPORT_STATIC_ALLOCATION ( 1 )
+#define configSUPPORT_STATIC_ALLOCATION ( 0 )
 #define configSUPPORT_DYNAMIC_ALLOCATION ( 1 )
 
 /* Queue related definitions. */
@@ -88,6 +97,9 @@
 #define configMTIMECMP_BASE_ADDRESS         ( configMTIMER_BASE_ADDRESS + configMTIMECMP_LO_OFFSET )
 #define configMTIMECMP_HI_ADDRESS      ( configMTIMER_BASE_ADDRESS + configMTIMECMP_HI_OFFSET )
 
+// Use the vTaskDelay function by asserting following macro
+
+#define INCLUDE_vTaskDelay 1
 
 #define configUSE_16_BIT_TICKS    ( 1 )
 
