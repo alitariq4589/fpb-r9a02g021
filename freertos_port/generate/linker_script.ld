@@ -192,6 +192,7 @@ SECTIONS
 	.stack 0x20006FFC (NOLOAD) : AT(0x20006FFC)
 	{
 		PROVIDE(__stack = .);
+		PROVIDE(__freertos_irq_stack_top = .);
 		ASSERT((__stack > (end + __stack_size)), "Error: Too much data - no room left for the stack");
 	} >RAM
 
