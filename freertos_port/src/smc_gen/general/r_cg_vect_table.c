@@ -29,7 +29,7 @@
 #include "r_cg_userdefine.h"
 
 extern void freertos_risc_v_trap_handler( void ); // This is defined in FreeRTOS source code
-
+extern void freertos_risc_v_application_exception_handler( void );
 static void nvect_function (void);
 static void nmi_handler (void);
 void initialize_vect (void);
@@ -312,13 +312,14 @@ void nmi_handler(void)
 
 void initialize_vect(void)
 {
-    R_CPU_AUX->NMIADDR = (uint32_t)nmi_handler;
+//    R_CPU_AUX->NMIADDR = (uint32_t)nmi_handler;
     /* The mtvec register must be set even if the interrupt vector table is not used. */
     /* Set the value (address of nvect_function()(0x1C0) >> 6)  to mtvec[31:6] */
     /* mtvec.BASE = 0x07; */
-    asm( "li t0, 0x1C2" );
-    asm( "csrw mtvec, t0" );    /* Set mtvec. */
-    __asm__ volatile ( "csrw mtvec, %0" : : "r" ( freertos_risc_v_trap_handler ) );
+//    asm( "li t0, 0x1C2" );
+//    asm( "csrw mtvec, t0" );    /* Set mtvec. */
+//    __asm__ volatile ( "csrw mtvec, %0" : : "r" ( freertos_risc_v_trap_handler ) );
+	__asm__ volatile ( "csrw mtvec, %0" : : "r" ( freertos_risc_v_application_exception_handler ) );
     /* The mtvt register must be set when using the interrupt vector table. */
     /* Set the value (address of VECT_SECT(0xC0) >> 6) to mtvt[31:6] */
     /* mtvt.MTVT = 0x03; */
