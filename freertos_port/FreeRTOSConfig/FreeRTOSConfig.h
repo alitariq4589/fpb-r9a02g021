@@ -40,7 +40,7 @@
 /* Hook function related definitions. */
 #define configUSE_IDLE_HOOK             ( 0 )
 #define configUSE_TICK_HOOK             ( 0 )
-#define configCHECK_FOR_STACK_OVERFLOW  ( 0 ) /* Or 1 if you want basic checking */
+#define configCHECK_FOR_STACK_OVERFLOW  ( 2 ) /* Or 1 if you want basic checking */
 #define configUSE_MALLOC_FAILED_HOOK    ( 1 )
 
 /* Task related definitions. */
